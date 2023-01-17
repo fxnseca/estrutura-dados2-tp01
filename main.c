@@ -8,9 +8,13 @@
 
 int main(){
     int qntd = 60; 
+    char *nome_arquivo;
     
     gerador_aleatorio(qntd);
-    ler_arquivo();
+    gerador_crescente(qntd);
+    gerador_decrescente(qntd);
+
+    ler_arquivo("crescente.bin");
 
     return 0;
 }

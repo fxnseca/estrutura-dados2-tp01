@@ -6,8 +6,8 @@
 #include "registros.h"
 #include "gerador.h"
 
-void ler_arquivo(){
-    FILE *arquivo = fopen("registro_gerado.bin", "rb");
+void ler_arquivo(char *nome_arquivo){
+    FILE *arquivo = fopen(nome_arquivo, "rb");
     Registro registro;
 
     //verifica se o arq foi aberto corretamente
@@ -26,7 +26,7 @@ void ler_arquivo(){
 }
 
 void gerador_crescente(int qntd){
-    FILE *arquivo = fopen("registro_gerado.bin", "wb");
+    FILE *arquivo = fopen("crescente.bin", "wb");
     Registro registro;
 
     if(!arquivo){
@@ -46,7 +46,7 @@ void gerador_crescente(int qntd){
 }
 
 void gerador_decrescente(int qntd){
-    FILE *arquivo = fopen("registro_gerado.bin", "wb");
+    FILE *arquivo = fopen("decrescente.bin", "wb");
     Registro registro;
 
     if(!arquivo){
@@ -66,7 +66,7 @@ void gerador_decrescente(int qntd){
 }
 
 void gerador_aleatorio(int qntd){
-    FILE *arquivo = fopen("registro_gerado.bin", "wb");
+    FILE *arquivo = fopen("aleatorio.bin", "wb");
     Registro registro;
 
     if(!arquivo){
